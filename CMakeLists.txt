@@ -17,7 +17,7 @@ find_package(LAPACK REQUIRED)
 # Build shared library
 set(srcs)
 add_subdirectory(src)
-add_library(dlfind SHARED ${srcs})
+add_library(dlfind ${srcs})
 target_link_libraries(dlfind ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
 
 # Set compiler arguments
